@@ -19,7 +19,7 @@ npm install --save meantime
 mt.set(function () {
   // Prints "1/Infinity", "2/Infinity", ... 
   console.log(this.calls + "/" + this.options.limit);
-, {
+}, {
   type: 'interval' // Run repeatedly as an interval (default: timeout)
 });
 ```
@@ -30,7 +30,7 @@ mt.set(function () {
 mt.setTimeout(function () {
   // Prints "1/1"
   console.log(this.calls + "/" + this.options.limit);
-, {
+}, {
   delay: 100 // Wait 100ms before calling (default: 1000)
 });
 ```
@@ -41,7 +41,7 @@ mt.setTimeout(function () {
 mt.setInterval(function () {
   // Prints "1/1", "1/2", ..., "1/10"
   console.log(this.calls + "/" + this.options.limit);
-, {
+}, {
   limit: 10,  // Only call callback 10 times (default: Infinity)
   delay: 100 // Wait 100ms before calling (default: 1000)
 });
