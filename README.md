@@ -21,7 +21,7 @@ The `meantime` function takes a callback function and an options object as argum
 
 ```javascript
 meantime(function () {
-  // Prints "1/10", "2/10", "3/10", ... "10/10"
+  // Prints "1/Infinity", "2/Infinity", "3/Infinity", ...
   console.log(this.calls + "/" + this.options.limit);
 }, {
   timeout:  5000, // Wait 5 seconds before first call.
