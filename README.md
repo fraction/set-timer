@@ -13,7 +13,7 @@ npm install set-timer
 
 ## Usage
 
-The `set-timer` function takes a callback function and an options object as arguments. The options are:
+The `setTimer` function takes a callback function and an options object as arguments. The options are:
 
 * **Timeout:** Number of milliseconds to wait before the first call, default 0.
 * **Interval:** Number of milliseconds to wait between calls, default 0.
