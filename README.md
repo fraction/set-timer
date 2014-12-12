@@ -23,8 +23,8 @@ The `set-timer` function takes a callback function and an options object as argu
 var setTimer = require('set-timer');
 
 var timer = setTimer(function () {
-  // Prints "1/Infinity", "2/Infinity", "3/Infinity", ...
-  console.log(this.calls + "/" + this.options.limit);
+  // Prints 1, 2, 3, ...
+  console.log(this.calls);
 }, {
   timeout:  5000, // Wait 5 seconds before first call.
   interval: 1000, // Wait 1 second between calls.
