@@ -11,14 +11,11 @@ var setTimer = function (cb, options) {
     timeout: null,
     interval: null,
     clear: function () {
-      if (typeof this.timeout !== 'null') {
-        clearTimeout(this.timeout);
-      }
-      if (typeof this.interval !== 'null') {
-        clearInterval(this.interval);
-      }
-    },
+      this.timeout  && clearTimeout(this.timeout);
+      this.interval && clearInterval(this.interval);
+    }
   };
+
 
   timer.timeout = setTimeout(function () {
     timer.interval = setInterval(function() {
