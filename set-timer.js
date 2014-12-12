@@ -33,4 +33,4 @@ var setTimer = function (cb, options) {
   return timer;
 };
 
-module.exports = { setTimer: setTimer };
+module.exports = setTimer;

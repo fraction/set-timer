@@ -2,7 +2,7 @@
   "name": "set-timer",
   "version": "2.0.0",
   "description": "A lightweight abstraction for the JavaScript Timer API.",
-  "main": "meantime.js",
+  "main": "set-timer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
