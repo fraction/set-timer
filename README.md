@@ -13,22 +13,32 @@ npm install set-timer
 
 ## Usage
 
-The `setTimer` function takes a callback function and an options object as arguments. The options are:
-
-* **Timeout:** Number of milliseconds to wait before the first call, default 0.
-* **Interval:** Number of milliseconds to wait between calls, default 0.
-* **Limit:** Number of times to call callback, default 1. Use `Infinity` to call indefinitely.
+The `setTimer` function takes a callback function and an optional options object as arguments.
 
 ```javascript
 var setTimer = require('set-timer');
 
-// Prints "1", "2", "3", ..., "10", "Cleared!"
+setTimer(function() {
+  console.log("I'm called immediately!");
+});
+```
+
+The options are:
+
+* **Timeout:** Number of milliseconds to wait before the first call (default: `0`).
+* **Limit:** Number of times to call callback (default: `1`). Use `Infinity` to call indefinitely.
+* **Interval:** Number of milliseconds to wait between calls (default: `0`). Ignored unless `limit > 1`.
+* **onClear:** Function to call after timer has been cleared (default: `Function.prototype`).
+
+```javascript
+var setTimer = require('set-timer');
+
 var timer = setTimer(function () {
-  console.log(this.calls);
+  console.log("I've been called " + this.calls + " times!");
 }, {
   timeout:  5000,         // Wait 5 seconds before first call.
-  interval: 1000,         // Wait 1 second between calls.
   limit: 10,              // Call callback 10 times.
+  interval: 1000,         // Wait 1 second between calls.
   onClear: function () {  // Call after timer is cleared.
     console.log("Cleared!");
   }
