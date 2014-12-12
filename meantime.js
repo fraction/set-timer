@@ -1,4 +1,4 @@
-var meantime = function (cb, options) {
+var setTimer = function (cb, options) {
   options          = options          || {};
   options.cb       = cb               || function () {};
   options.timeout  = options.timeout  || 0;
@@ -24,7 +24,7 @@ var meantime = function (cb, options) {
     timer.interval = setInterval(function() {
       timer.calls++;
       options.cb.call(timer);
-      if (options.limit - timer.calls <= 0) {
+      if (timer.calls >= options.limit) {
         timer.clear();
       }
     }, options.interval);
@@ -33,4 +33,4 @@ var meantime = function (cb, options) {
   return timer;
 };
 
-module.exports = { meantime: meantime };
+module.exports = { setTimer: setTimer };
