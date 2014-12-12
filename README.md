@@ -5,7 +5,7 @@ A lightweight abstraction for the JavaScript Timer API.
 
 ## Installation
 
-Install setTimer as an [NPM package](https://www.npmjs.org/package/meantime).
+Install setTimer as an [NPM package](https://www.npmjs.org/package/set-timer).
 
 ```sh
 npm install set-timer
