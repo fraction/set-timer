@@ -22,7 +22,7 @@ The `setTimer` function takes a callback function and an options object as argum
 ```javascript
 var setTimer = require('set-timer');
 
-// Prints "1", "2", "3", ..., "10", "I've been cleared!"
+// Prints "1", "2", "3", ..., "10", "Cleared!"
 var timer = setTimer(function () {
   console.log(this.calls);
 }, {
@@ -30,7 +30,7 @@ var timer = setTimer(function () {
   interval: 1000,         // Wait 1 second between calls.
   limit: 10,              // Call callback 10 times.
   onClear: function () {  // Call after timer is cleared.
-    console.log("I've been cleared!");
+    console.log("Cleared!");
   }
 });
 ```
