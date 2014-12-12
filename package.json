@@ -1,6 +1,6 @@
 {
   "name": "set-timer",
-  "version": "2.1.2",
+  "version": "2.1.1",
   "description": "A lightweight abstraction for the JavaScript Timer API.",
   "main": "set-timer.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/christianbundy/set-timer.git"
+    "url": "https://github.com/fraction/set-timer.git"
   },
   "keywords": [
     "timer",
@@ -24,7 +24,7 @@
   "author": "Christian Bundy <me@christianbundy.com> (http://christianbundy.com/)",
   "license": "FPL",
   "bugs": {
-    "url": "https://github.com/christianbundy/set-timer/issues"
+    "url": "https://github.com/fraction/set-timer/issues"
   },
-  "homepage": "https://github.com/set-timer/meantime"
+  "homepage": "https://github.com/fraction/set-timer"
 }

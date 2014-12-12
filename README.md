@@ -39,8 +39,8 @@ Timers are automatically cleared after their call count reaches `options.limit`,
 
 ## Support
 
-Please [open an issue](https://github.com/christianbundy/set-timer/issues/new) for questions and concerns.
+Please [open an issue](https://github.com/fraction/set-timer/issues/new) for questions and concerns.
 
 ## Contributing
 
-Fork the project, commit your changes, and [open a pull request](https://github.com/christianbundy/set-timer/compare/).
+Fork the project, commit your changes, and [open a pull request](https://github.com/fraction/set-timer/compare/).
