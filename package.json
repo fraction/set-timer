@@ -1,6 +1,6 @@
 {
-  "name": "Meantime",
-  "version": "1.0.0",
+  "name": "meantime",
+  "version": "1.0.1",
   "description": "A lightweight abstraction for the JavaScript Timer API.",
   "main": "meantime.js",
   "scripts": {
