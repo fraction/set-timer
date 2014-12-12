@@ -13,39 +13,24 @@ npm install --save meantime
 
 ## Usage
 
-### `mt.set(cb, options)`
+The `meantime` function takes a callback function and an options object as arguments. The options are:
+
+* **Timeout:** Number of milliseconds to wait before the first call (default `0`).
+* **Interval:** Number of milliseconds to wait between calls (default `0`).
+* **Limit:** Number of times to call callback (default `0`).
 
 ```javascript
-mt.set(function () {
-  // Prints "1/Infinity", "2/Infinity", ... 
+meantime(function () {
+  // Prints "1/10", "2/10", "3/10", ... "10/10"
   console.log(this.calls + "/" + this.options.limit);
 }, {
-  type: 'interval' // Run repeatedly as an interval (default: timeout)
+  timeout:  5000, // Wait 5 seconds before first call.
+  interval: 1000, // Wait 1 second between calls.
+  limit: Infinity // Keep calling indefinitely.
 });
 ```
 
-### `mt.setTimeout(cb, options)`
-
-```javascript
-mt.setTimeout(function () {
-  // Prints "1/1"
-  console.log(this.calls + "/" + this.options.limit);
-}, {
-  delay: 100 // Wait 100ms before calling (default: 1000)
-});
-```
-
-### `mt.setInterval(cb, options)`
-
-```javascript
-mt.setInterval(function () {
-  // Prints "1/1", "1/2", ..., "1/10"
-  console.log(this.calls + "/" + this.options.limit);
-}, {
-  limit: 10,  // Only call callback 10 times (default: Infinity)
-  delay: 100 // Wait 100ms before calling (default: 1000)
-});
-```
+You can clear the timer with `this.clear()` from inside of the callback, or `timer.clear()` from outside of the object (where `timer` is the returned object from `meantime()`).
 
 ## Support
 
