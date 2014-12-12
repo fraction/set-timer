@@ -5,10 +5,10 @@ A lightweight abstraction for the JavaScript Timer API.
 
 ## Installation
 
-You're currently out of luck, but in the future you'll be able to install Meantime with NPM.
+Install Meantime as an [NPM package](https://www.npmjs.org/package/meantime).
 
 ```sh
-npm install --save meantime
+npm install meantime
 ```
 
 ## Usage
@@ -20,6 +20,8 @@ The `meantime` function takes a callback function and an options object as argum
 * **Limit:** Number of times to call callback (default 1).
 
 ```javascript
+var meantime = require('meantime');
+
 meantime(function () {
   // Prints "1/Infinity", "2/Infinity", "3/Infinity", ...
   console.log(this.calls + "/" + this.options.limit);
