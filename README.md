@@ -29,7 +29,7 @@ var timer = setTimer(function () {
   timeout:  5000,         // Wait 5 seconds before first call.
   interval: 1000,         // Wait 1 second between calls.
   limit: 10,              // Call callback 10 times.
-  onClear: function () {  // Print after timer is cleared.
+  onClear: function () {  // Call after timer is cleared.
     console.log("I've been cleared!");
   }
 });
