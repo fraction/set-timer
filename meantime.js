@@ -33,3 +33,4 @@ var meantime = function (cb, options) {
   return timer;
 };
 
+module.exports = { meantime: meantime };
