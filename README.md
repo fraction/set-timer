@@ -15,9 +15,9 @@ npm install --save meantime
 
 The `meantime` function takes a callback function and an options object as arguments. The options are:
 
-* **Timeout:** Number of milliseconds to wait before the first call (default `0`).
-* **Interval:** Number of milliseconds to wait between calls (default `0`).
-* **Limit:** Number of times to call callback (default `0`).
+* **Timeout:** Number of milliseconds to wait before the first call (default 0).
+* **Interval:** Number of milliseconds to wait between calls (default 0).
+* **Limit:** Number of times to call callback (default 1).
 
 ```javascript
 meantime(function () {
