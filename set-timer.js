@@ -1,9 +1,10 @@
 var setTimer = function (cb, options) {
   options          = options          || {};
-  options.cb       = cb               || function () {};
   options.timeout  = options.timeout  || 0;
   options.interval = options.interval || 0;
   options.limit    = options.limit    || 1;
+  options.onClear  = options.onClear  || Function.prototype;
+  options.cb       = cb               || Function.prototype;
 
   var timer = {
     calls: 0,
@@ -11,8 +12,10 @@ var setTimer = function (cb, options) {
     timeout: null,
     interval: null,
     clear: function () {
-      this.timeout  && clearTimeout(this.timeout);
-      this.interval && clearInterval(this.interval);
+      var self = this;
+      self.timeout  && clearTimeout(self.timeout);
+      self.interval && clearInterval(self.interval);
+      options.onClear.call(self);
     }
   };
 
