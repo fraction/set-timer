@@ -1,7 +1,7 @@
 Meantime
 ========
 
-Abstraction for Javascript timers: setTimeout, setInterval, clearTimeout, and clearInterval.
+A lightweight abstraction for the JavaScript Timer API.
 
 ## Installation
 
