@@ -32,7 +32,7 @@ var timer = setTimer(function () {
 });
 ```
 
-You can clear the timer with `this.clear()` from inside of the callback, or `timer.clear()` after the timer has been set.
+You can clear the timer with `this.clear()` from inside of scope the callback, or `timer.clear()` in any scope that the timer has been defined.
 
 ## Support
 
