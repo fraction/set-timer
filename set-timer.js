@@ -16,7 +16,6 @@ var setTimer = function (cb, options) {
     }
   };
 
-
   timer.timeout = setTimeout(function () {
     timer.interval = setInterval(function() {
       timer.calls++;
