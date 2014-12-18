@@ -1,5 +1,5 @@
 var setTimer = function (cb, options) {
-  options          = options          || {};
+  options          = options          || Object.prototype;
   options.timeout  = options.timeout  || 0;
   options.interval = options.interval || 0;
   options.limit    = options.limit    || 1;
