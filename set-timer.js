@@ -12,10 +12,9 @@ var setTimer = function (cb, options) {
     timeout: null,
     interval: null,
     clear: function () {
-      var self = this;
-      self.timeout  && clearTimeout(self.timeout);
-      self.interval && clearInterval(self.interval);
-      options.onClear.call(self);
+      if (this.timeout) clearTimeout(this.timeout);
+      if (this.interval) clearInterval(this.interval);
+      options.onClear.call(this);
     }
   };
 
